@@ -23,7 +23,7 @@ mongoose.connect(DB.db_url, {
 }) ;
 
 app.use(express.json());
-
+app.use('/uploads', express.static('uploads'))
 app.use('/music', musicRoutes);
 
 app.listen(port, () => {
